@@ -4,7 +4,8 @@ import "./App.css";
 import clevertap from "clevertap-web-sdk";
 
 function App() {
-  const AccountId = "84W-6W5-746Z";
+  // const AccountId = "84W-6W5-746Z";
+  const AccountId = "86K-85R-746Z";
   const region = "in1";
 
   useEffect(() => {
@@ -26,8 +27,8 @@ function App() {
     eventProperties = {
       Secondary_Status: "Hungup",
       Status: "Contactable",
-      lead_owner_mobile_number: "+91 2233223323",
-      lead_owner_name: "+91 2233223323",
+      lead_owner_mobile_number: "+91 133223323",
+      lead_owner_name: "+91 133223323",
     }
   ) => {
     clevertap.event.push(eventName, eventProperties && eventProperties);
@@ -35,8 +36,8 @@ function App() {
 
   const handleOnUserLogin = () => {
     const userObj = {
-      Name: "test web push",
-      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4kk",
+      Name: "TEST__TEST",
+      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d444",
       Phone: `+${"91" + "2233223323"}`,
     };
     clevertap.onUserLogin.push({
@@ -47,8 +48,8 @@ function App() {
 
   const handleOnUserProfileUpdate = () => {
     const userObj = {
-      Name: "test web push",
-      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4kk",
+      Name: "TEST__TEST",
+      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d444",
       Phone: `+${"91" + "2233223323"}`,
       "MSG-email": true, // Disable email notifications
       "MSG-push": true, // Enable push notifications
