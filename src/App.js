@@ -4,7 +4,7 @@ import "./App.css";
 import clevertap from "clevertap-web-sdk";
 
 function App() {
-  const AccountId = "86K-85R-746Z";
+  const AccountId = "84W-6W5-746Z";
   const region = "in1";
 
   useEffect(() => {
@@ -36,7 +36,7 @@ function App() {
   const handleOnUserLogin = () => {
     const userObj = {
       Name: "test web push",
-      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4b7",
+      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4aa",
       Phone: `+${"91" + "2233223323"}`,
     };
     clevertap.onUserLogin.push({
@@ -48,7 +48,7 @@ function App() {
   const handleOnUserProfileUpdate = () => {
     const userObj = {
       Name: "test web push",
-      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4b7",
+      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4aa",
       Phone: `+${"91" + "2233223323"}`,
       "MSG-email": true, // Disable email notifications
       "MSG-push": true, // Enable push notifications
@@ -70,9 +70,10 @@ function App() {
         height: "100vh",
       }}
     >
-      <button onClick={handleOnUserLogin()}>Call on User Login</button>
-      <button onClick={handleOnUserProfileUpdate}>Call Profile Update</button>
-      <button>Call on User Login</button>
+      <button onClick={() => handleOnUserLogin()}>Call on User Login</button>
+      <button onClick={() => handleOnUserProfileUpdate()}>
+        Call Profile Update
+      </button>
     </div>
   );
 }
