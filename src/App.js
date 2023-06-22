@@ -8,7 +8,17 @@ function App() {
   const region = "in1";
 
   useEffect(() => {
-    console.log("====", AccountId);
+    clevertap.init(AccountId, region);
+    clevertap.setLogLevel(3);
+    clevertap.notifications.push({
+      titleText: "aaaa",
+      bodyText: "bbbbb",
+      okButtonText: "ok",
+      rejectButtonText: "rejectButtonText",
+      okButtonColor: "okButtonColorInHex",
+      askAgainTimeInSeconds: 5,
+      serviceWorkerPath: "/clevertap_sw.js",
+    });
   }, []);
 
   const cleverTapTrackEvents = (
