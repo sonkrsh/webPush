@@ -36,7 +36,7 @@ function App() {
   const handleOnUserLogin = () => {
     const userObj = {
       Name: "test web push",
-      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4aa",
+      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4kk",
       Phone: `+${"91" + "2233223323"}`,
     };
     clevertap.onUserLogin.push({
@@ -48,7 +48,7 @@ function App() {
   const handleOnUserProfileUpdate = () => {
     const userObj = {
       Name: "test web push",
-      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4aa",
+      Identity: "12e7e8e8-0dd4-47c5-a784-654360b5d4kk",
       Phone: `+${"91" + "2233223323"}`,
       "MSG-email": true, // Disable email notifications
       "MSG-push": true, // Enable push notifications
