@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+// import "https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("./clevertap_sw.js")
+    .register(
+      "https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush.js"
+    )
     .then(function (registration) {
       console.log("===success");
     })
