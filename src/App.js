@@ -8,20 +8,6 @@ function App() {
   const AccountId = "86K-85R-746Z";
   const region = "in1";
 
-  useEffect(() => {
-    clevertap.init(AccountId, region);
-    clevertap.setLogLevel(3);
-    clevertap.notifications.push({
-      titleText: "aaaa",
-      bodyText: "bbbbb",
-      okButtonText: "ok",
-      rejectButtonText: "rejectButtonText",
-      okButtonColor: "okButtonColorInHex",
-      askAgainTimeInSeconds: 5,
-      serviceWorkerPath: "/clevertap_sw.js",
-    });
-  }, []);
-
   const cleverTapTrackEvents = (
     eventName = "Lead_stage_02_WMS",
     eventProperties = {
@@ -61,6 +47,19 @@ function App() {
     });
   };
 
+  const handleInit = () => {
+    clevertap.init(AccountId, region);
+    clevertap.setLogLevel(3);
+    clevertap.notifications.push({
+      titleText: "aaaa",
+      bodyText: "bbbbb",
+      okButtonText: "ok",
+      rejectButtonText: "rejectButtonText",
+      okButtonColor: "okButtonColorInHex",
+      askAgainTimeInSeconds: 5,
+      serviceWorkerPath: "/clevertap_sw.js",
+    });
+  };
   return (
     <div
       className="App"
@@ -75,6 +74,7 @@ function App() {
       <button onClick={() => handleOnUserProfileUpdate()}>
         Call Profile Update
       </button>
+      <button onClick={() => handleInit()}>INIT</button>
     </div>
   );
 }
