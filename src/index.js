@@ -6,18 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 // import "https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// if ("serviceWorker" in navigator) {
-//   navigator.serviceWorker
-//     .register(
-//       "https://s3-eu-west-1.amazonaws.com/static.wizrocket.com/js/sw_webpush.js"
-//     )
-//     .then(function (registration) {
-//       console.log("===success");
-//     })
-//     .catch(function (err) {
-//       console.log("===error", err);
-//     });
-// }
 
 root.render(
   <React.StrictMode>
